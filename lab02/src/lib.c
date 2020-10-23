@@ -25,6 +25,9 @@ char *get_animal_type_name(enum animal_type type)
 	case ARTEM:
 		result = "Артём";
 		break;
+	case LUDINA:
+	        result = "Людина"
+	        break;
 	default:
 		result = "N/A";
 	}

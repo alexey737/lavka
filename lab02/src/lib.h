@@ -29,6 +29,7 @@ enum animal_type {
 	OLEG, /**< Олег */
 	DANIL, /**< Данил */
 	ARTEM, /**< Артём */
+	LUDINA, /**< Людина */
 	ANIMAL_TYPE_COUNT /**< Кількість тварин */
 };
 
