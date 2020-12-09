@@ -3,15 +3,14 @@ int main() {
 	int num = 496;
 	int num1 = num;
 	int i;
-	for (i = (num-1); i > 0; i--) {
-		if (num % i == 0) {       
-			num1 = num1 - i;
-			if (num1 <= 0) {        
+	for (i = (num-1); i > 0; i--) {    //цикл проверки числа на совершенство 
+		if (num % i == 0) {          
+			num1 = num1 - i;   //делитель, на которое число делится на цело, отнимается от заданого числа
+			if (num1 == 0) {        
 				if (i == 1) {
 					printf("Число досконале");
 					break;
 				}
-
 				else {
 					printf("Число недосконале");
 					break;
