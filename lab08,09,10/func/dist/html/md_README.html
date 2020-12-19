@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 07: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 07
+   &#160;<span id="projectnumber">7.1</span>
+   </div>
+   <div id="projectbrief">Реалізувати функцію, що визначає, скільки серед заданої послідовності чисел таких пар, у котрих перше число меньше наступного, використовуючи функцію з варіативною кількістю аргументів.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><em>Реалізувати</em> функцію, що визначає, скільки серед заданої послідовності чисел таких пар, у котрих перше число менше наступного.</li>
+</ol>
+<p><b>Виконання роботи</b></p><ol type="1">
+<li><b>Функціональне призначення</b> Програма призначена для визначення кількості серед заданої послідовності чисел таких пар, у котрих перше число менше наступного.</li>
+<li>Написання коду програми <div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">#include &lt;stdarg.h&gt;</div>
+<div class="line"> </div>
+<div class="line">int task(int size, ...); </div>
+<div class="line"> </div>
+<div class="line">int main(){</div>
+<div class="line">int result = task(7, 2, 3, 4, 5, 6, 9, 8);</div>
+<div class="line">printf(&quot;%d &quot;, result);</div>
+<div class="line">return 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int task(int size, ...){</div>
+<div class="line">int mas[size];</div>
+<div class="line">int kol = 0;</div>
+<div class="line">int i;</div>
+<div class="line">va_list ap; //початок роботи з варіативними аргументами</div>
+<div class="line">va_start(ap, size);</div>
+<div class="line">    for(i = 0; i &lt; size; i++){</div>
+<div class="line">    mas[i] = va_arg(ap, int);</div>
+<div class="line">    printf(&quot;%d &quot;, mas[i]);</div>
+<div class="line">    }</div>
+<div class="line">    printf(&quot;\n&quot;);</div>
+<div class="line">        for(i = 0; i &lt; size; i++){</div>
+<div class="line">        if(i != size-1){</div>
+<div class="line">            if(mas[i] &lt; mas[i+1]){      </div>
+<div class="line">            kol++;</div>
+<div class="line">            }</div>
+<div class="line">    }</div>
+<div class="line">}   </div>
+<div class="line">va_end(ap); //кінець роботи з варіативними аргументами </div>
+<div class="line">return kol;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>Компіяція програми та перевірка на правильність її роботи через nemiver</li>
+</ol>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/func/doc/nemiver7.1.png" alt="text" class="inline"/></p>
+<p>4.Блок-схема</p>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/func/doc/7.1.png" alt="text" class="inline"/></p>
+<p><b>Висновок</b> Я створив програму, яка призначена для визначення кількості серед заданої послідовності чисел таких пар, у котрих перше число менше наступного. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

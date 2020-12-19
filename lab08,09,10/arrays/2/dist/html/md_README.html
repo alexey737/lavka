@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 07: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 07
+   &#160;<span id="projectnumber">7.2(6)</span>
+   </div>
+   <div id="projectbrief">Заповнити масив із заданої кількості елементів простими числами, що не повторюються.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li>1. <em>Заповнити масив</em> із заданої кількості елеметів простими числами, що не повторюються.</li>
+</ol>
+<p><b>Виконання роботи</b></p><ol type="1">
+<li><b>Функціональне призначення</b> Програма призначена для заповнення масивa із заданої кількості елеметів простими числами, що не повторюються.</li>
+<li>Написання коду програми <div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">#define size 10         // розмірність масиву</div>
+<div class="line">void zap(int mas[size]); </div>
+<div class="line"> </div>
+<div class="line">int main(){     </div>
+<div class="line">int mas[size] = {0};</div>
+<div class="line">zap(mas);        </div>
+<div class="line">return 0;</div>
+<div class="line">} </div>
+<div class="line"> </div>
+<div class="line">void zap(int mas[size]){     </div>
+<div class="line">int i, j;</div>
+<div class="line">int p = 0;             // перевірка числа на простоту</div>
+<div class="line">int a = 0;             // індекс елемента масиву</div>
+<div class="line">// цикл для перебору простих чисел</div>
+<div class="line">  for(i = 2; i &lt; size; i++){      </div>
+<div class="line">    for(j = 2; j &lt; i; j++){</div>
+<div class="line">      if(i % j != 0){ </div>
+<div class="line">      p = 0;               // число просте</div>
+<div class="line">     }else{</div>
+<div class="line">      p = 1;               // число складне</div>
+<div class="line">      break;</div>
+<div class="line">    }      </div>
+<div class="line">}</div>
+<div class="line">  if(p == 0){</div>
+<div class="line">  mas[a] = i;</div>
+<div class="line"> </div>
+<div class="line">     a++;</div>
+<div class="line">   if(a == size){</div>
+<div class="line">      break;</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">} </div>
+</div><!-- fragment --></li>
+<li>Компіляція програми та перевірка на правильність її роботи через nemiver</li>
+</ol>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/arrays/2/doc/nemiver6.2.png" alt="text" class="inline"/></p>
+<p>4.Блок-схема</p>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/arrays/2/doc/6.2.png" alt="text" class="inline"/></p>
+<p><b>Висновок</b> Я створив програму, яка заповняє масив із заданої кількості елеметів простими числами, що не повторюються. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

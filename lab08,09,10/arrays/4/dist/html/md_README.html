@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота 07: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота 07
+   &#160;<span id="projectnumber">7.4(6)</span>
+   </div>
+   <div id="projectbrief">У заданому тексті знайти кількість слів за умови, що між словами може бути будь-яка кількість пропусків.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><em>Визначити</em> кількість слів у заданому тексті</li>
+</ol>
+<p><b>Виконання роботи</b></p><ol type="1">
+<li><b>Функціональне призначення</b> Програма призначена для рахунку кількості слів в тексті.</li>
+<li>Написання коду програми <div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">void poisk_slov(char text[]);      </div>
+<div class="line"> </div>
+<div class="line">int main(){</div>
+<div class="line">char text[] = {&quot;Hello ,! ? . sasa    World&quot;};     // заданый текст</div>
+<div class="line">poisk_slov(text);                  </div>
+<div class="line">return 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void poisk_slov(char text[]){</div>
+<div class="line">int words = 0;                     // переменная для подсчёта слов в тексте </div>
+<div class="line">//цикл для поиска количества слов в тексте</div>
+<div class="line">for(int i = 0; text[i] != &#39;\0&#39;; i++){</div>
+<div class="line"> if(text[i] != &#39; &#39; &amp;&amp; text[i+1] &lt;= &#39; &#39; &amp;&amp; text[i] != &#39;,&#39; &amp;&amp; text[i] != &#39;.&#39; &amp;&amp; text[i] != &#39;!&#39; &amp;&amp; text[i] != &#39;?&#39;){</div>
+<div class="line">  words++;</div>
+<div class="line"> }</div>
+<div class="line">}   </div>
+<div class="line">printf(&quot;%d&quot;, words);</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>Компіляція програми та перевірка на привильність її роботи через nemiver</li>
+</ol>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/arrays/4/doc/nemiver6.4.png" alt="text" class="inline"/></p>
+<p>4.Блок-схема</p>
+<p><img src="file:///home/aleksey/lavka/lab08,09,10/arrays/4/doc/6.4.png" alt="text" class="inline"/></p>
+<p><b>Висновок</b> Я створив програму, яка рахує кількість слів в тексті. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

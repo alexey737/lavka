@@ -2,7 +2,7 @@
 int main(){
 #define size 100
 int num = 6293;
-int n1 = 0, n2 = 0, n3 = 0, n4 = 0; 
+int n1, n2, n3, n4; 
 char x[size];       //результирующая строка
 if(num > 9999){    //слишком большое число
 return 0;

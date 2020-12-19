@@ -5,10 +5,10 @@ int words = 0;                             // переменная для под
 
 //цикл для поиска количества слов в тексте
 for(int i = 0; text[i] != '\0'; i++){
- if(text[i] != ' ' && text[i+1] <= ' '){
+ if(text[i] != ' ' && text[i+1] <= ' ' && text[i] != ',' && text[i] != '.' && text[i] != '!' && text[i] != '?'){
   words++;
- }
-}   
+  }
+ }   
 printf("%d", words);
 return 0;
 }
