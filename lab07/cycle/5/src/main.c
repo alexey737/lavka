@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <time.h>
 float result(float num);
 
 int main() {
-float num = 9;
+int num = 10;
+printf("%d\n", num);
 result(num); 
 return 0;
 }
@@ -19,7 +21,7 @@ for (float i = 1.0; i < num; i++) {
 	 x1 = (((num/(i-1)) + (i-1))/2);      
 	 x2 = (num/(((num/(i-1)) + (i-1))/2));  
          koren = ((x1 + x2)/2); 
-         printf("%.4f", koren); 
+         printf("%.f", koren); 
          break;    
         }
 }	
