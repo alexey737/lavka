@@ -27,4 +27,3 @@ for (float i = 1.0; i < num; i++) {
 }	
 return koren;
 }
-
