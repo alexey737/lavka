@@ -91,6 +91,12 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функції</h2></td></tr>
+<tr class="memitem:a7fa30619f5100fc1974627b89f1957cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7fa30619f5100fc1974627b89f1957cb">zap</a> (int mas[<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a>][<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a>])</td></tr>
+<tr class="memdesc:a7fa30619f5100fc1974627b89f1957cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">@fuction zap  <a href="main_8c.html#a7fa30619f5100fc1974627b89f1957cb">Детальніше...</a><br /></td></tr>
+<tr class="separator:a7fa30619f5100fc1974627b89f1957cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4f50e5c4a0d32a9911296b6738f007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#afc4f50e5c4a0d32a9911296b6738f007">perebor</a> (int mas[<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a>][<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a>], int res[<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a> *<a class="el" href="main_8c.html#aa23c661441688350614bd6a350d2b6ff">size</a>])</td></tr>
+<tr class="memdesc:afc4f50e5c4a0d32a9911296b6738f007"><td class="mdescLeft">&#160;</td><td class="mdescRight">@fuction perebor  <a href="main_8c.html#afc4f50e5c4a0d32a9911296b6738f007">Детальніше...</a><br /></td></tr>
+<tr class="separator:afc4f50e5c4a0d32a9911296b6738f007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Головна функція.  <a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Детальніше...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,17 +141,86 @@ $(function() {
 <p>Послідовність дій:</p><ul>
 <li>оголошення змінних <dl class="params"><dt>Аргументи</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mas[][]</td><td>двовимірний масив </td></tr>
-    <tr><td class="paramname">res[]</td><td>результуючий масив </td></tr>
-    <tr><td class="paramname">a</td><td>індекс елементів результуючого масиву </td></tr>
-    <tr><td class="paramname">*pRes</td><td>покажчик на результуючий масив</td></tr>
+    <tr><td class="paramname">mas[size][size]</td><td>масив цілих чисел </td></tr>
+    <tr><td class="paramname">res[size*size]</td><td>результуючий масив</td></tr>
   </table>
   </dd>
 </dl>
 </li>
-<li>заповнення двовимірного масиву випадковими цілими числами</li>
-<li>перевірка числа кожного рядка масива на парність та додатність</li>
-<li>занесення у результуючий масив парних та додатніх чисел </li>
+<li>вивід результату роботи @function zap</li>
+<li>вивід результату роботи @function perebor <dl class="section return"><dt>Повертає</dt><dd>успішний код повернення з програми (0) </dd></dl>
+</li>
+</ul>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afc4f50e5c4a0d32a9911296b6738f007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4f50e5c4a0d32a9911296b6738f007">&#9670;&nbsp;</a></span>perebor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void perebor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mas</em>[size][size], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res</em>[size *size]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@fuction perebor </p>
+<p>Послідовність дій:</p><ul>
+<li>оголошення змінних <dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>індекс результуючого масиву</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li>цикл перебору чисел масиву mas[size][size]:<ul>
+<li>якщо число парне і додатнє, то воно записується у результуючий масив res[size*size] </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a7fa30619f5100fc1974627b89f1957cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa30619f5100fc1974627b89f1957cb">&#9670;&nbsp;</a></span>zap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void zap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mas</em>[size][size]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@fuction zap </p>
+<p>Послідовність дій:</p><ul>
+<li>цикл заповнення масиву випадковими числами використовуючи функцію rand() </li>
 </ul>
 
 </div>

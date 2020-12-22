@@ -70,44 +70,54 @@ $(function() {
 <div class="textblock"><ol type="1">
 <li>Дано масив масивів з N x N цілих чисел. У кожному рядку масиву <b>знайти</b> кількість парних додатніх чисел. Отримані результати <b>записати</b> в одновимірний масив.</li>
 </ol>
-<p><b>Виконання роботи</b></p><ol type="1">
-<li><b>Функціональне призначення</b> Програма призначена для пошуку парних додатніх чисел у масиві, використовуючи показчики.</li>
-<li>Написання коду програми <div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Виконання роботи</h1>
+<p><b>Визначення номеру завдння для звіту</b> ((10-1)%4) + 1 = 2, тож звіт виконується за завданням під номером 2.</p>
+<p><b>Функціональне призначення</b> Програма призначена для пошуку парних додатніх чисел у масиві, використовуючи показчики.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Написання коду програми</h1>
+<div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
 <div class="line">#define size 3</div>
+<div class="line">void zap(int mas[size][size]);</div>
+<div class="line">void perebor(int mas[size][size], int res[size*size]);</div>
 <div class="line"> </div>
 <div class="line">int main(){</div>
 <div class="line">int mas[size][size];</div>
 <div class="line">int res[size*size] = {0};</div>
-<div class="line">int a = 0;</div>
-<div class="line">int *pRes = res;</div>
+<div class="line">zap(mas);</div>
+<div class="line">perebor(mas, res);</div>
+<div class="line">return 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void zap(int mas[size][size]){</div>
 <div class="line">for(int i = 0; i &lt; size; i++){</div>
-<div class="line">    printf(&quot;\n&quot;);</div>
 <div class="line">    for(int j = 0; j &lt; size; j++){</div>
 <div class="line">        *(*(mas+i)+j) = rand()%100;</div>
-<div class="line">        printf(&quot;%d &quot;, mas[i][j]);</div>
 <div class="line">    }</div>
+<div class="line">   }</div>
 <div class="line">}</div>
-<div class="line">printf(&quot;\n\n\n&quot;);</div>
 <div class="line"> </div>
+<div class="line">void perebor(int mas[size][size], int res[size*size]){</div>
+<div class="line">int a = 0;</div>
 <div class="line">for(int i = 0; i &lt; size; i++){</div>
 <div class="line">    for(int j = 0; j &lt; size; j++){</div>
 <div class="line">        if( ((*(*(mas+i)+j))%2) == 0 &amp;&amp; *(*(mas+i)+j) &gt; 0){</div>
-<div class="line">         pRes[a] = *(*(mas+i)+j);</div>
-<div class="line">         printf(&quot;%d &quot;, res[a]);</div>
-<div class="line">         a++;</div>
+<div class="line">        *(res+a) = *(*(mas+i)+j);</div>
+<div class="line">        a++;</div>
+<div class="line">        </div>
 <div class="line">        }</div>
 <div class="line">    }</div>
+<div class="line">   }</div>
 <div class="line">}</div>
-<div class="line"> </div>
-<div class="line">return 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --></li>
-<li>Компіляція програми та перевірка на правильність її роботи через nemiver</li>
-</ol>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Компіляція програми та перевірка на правильність її роботи через nemiver</h1>
 <p><img src="file:///home/aleksey/lavka/lab11/2/doc/nemiver11.2.png" alt="text" class="inline"/></p>
-<p>4.Блок-схема</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Блок-схема</h1>
 <p><img src="file:///home/aleksey/lavka/lab11/2/doc/11.2.png" alt="text" class="inline"/></p>
-<p><b>Висновок</b> У ході цієї лабораторної роботи я ознайомився з показчиками та виконав з ними завдання, одне з яких я описав у цьому звіті. </p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Висновок</h1>
+<p>У ході цієї лабораторної роботи я ознайомився з показчиками та виконав з ними 2 завдання на оцінку добре, одне з яких я описав у цьому звіті. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

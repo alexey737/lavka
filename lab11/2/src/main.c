@@ -20,44 +20,60 @@
 */
 #include <stdio.h>
 #define size 3
+void zap(int mas[size][size]);
+void perebor(int mas[size][size], int res[size*size]);
 
 /**
 * Головна функція.
 *
 * Послідовність дій:
-* - оголошення змінних 
-*	@param mas[][] двовимірний масив
-*	@param res[] результуючий масив
-*	@param a індекс елементів результуючого масиву 
-*	@param *pRes покажчик на результуючий масив
-* - заповнення двовимірного масиву випадковими цілими числами
-* - перевірка числа кожного рядка масива на парність та додатність
-* - занесення у результуючий масив парних та додатніх чисел 
-*
+* - оголошення змінних
+*	@param mas[size][size] масив цілих чисел
+*	@param res[size*size] результуючий масив
+* - вивід результату роботи @function zap
+* - вивід результату роботи @function perebor
+* @return успішний код повернення з програми (0)
 */
 int main(){
 int mas[size][size];
 int res[size*size] = {0};
-int a = 0;
-int *pRes = res;
+zap(mas);
+perebor(mas, res);
+return 0;
+}
+
+/**
+* @fuction zap
+*
+* Послідовність дій:
+* - цикл заповнення масиву випадковими числами використовуючи функцію rand()
+*/
+void zap(int mas[size][size]){
 for(int i = 0; i < size; i++){
-	printf("\n");
 	for(int j = 0; j < size; j++){
 		*(*(mas+i)+j) = rand()%100;
-		printf("%d ", mas[i][j]);
 	}
+   }
 }
-printf("\n\n\n");
 
+/**
+* @fuction perebor
+*
+* Послідовність дій:
+* - оголошення змінних
+*	@param a індекс результуючого масиву 
+* - цикл перебору чисел масиву mas[size][size]:
+*	- якщо число парне і додатнє, то воно записується у результуючий масив res[size*size]
+*/
+void perebor(int mas[size][size], int res[size*size]){
+int a = 0;
 for(int i = 0; i < size; i++){
 	for(int j = 0; j < size; j++){
 		if( ((*(*(mas+i)+j))%2) == 0 && *(*(mas+i)+j) > 0){
-		 pRes[a] = *(*(mas+i)+j);
-		 printf("%d ", res[a]);
-		 a++;
+		*(res+a) = *(*(mas+i)+j);
+		a++;
+		
 		}
 	}
-}
-
-return 0;
+   }
 }

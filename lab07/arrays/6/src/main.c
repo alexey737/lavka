@@ -1,4 +1,4 @@
-#define size 3            //размерность матрицы
+#define size 3            //розмір матриці
 void matr_v_kvadrate(int mas[size][size]);  
 
 int main(){
@@ -13,7 +13,7 @@ return 0;
 
 void matr_v_kvadrate(int mas[size][size]){
 int res[size][size] = {0};
-//цикл для возведения матрицы в квадрат
+//цикл возведення матриці в квадрат
 for(int i = 0; i < size; i++){
   for(int j = 0; j < size; j++){
     for(int k = 0; k < size; k++){
