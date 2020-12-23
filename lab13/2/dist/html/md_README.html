@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Знайти кількість слів у кожному рядку тексту.: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Знайти кількість слів у кожному рядку тексту.
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота №13</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><b>Визначити</b> клькість слів у кожному рядку тексту.</li>
+</ol>
+<p><b>Виконав: Лавка Олексій</b></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Виконання роботи</h1>
+<p><b>Визначення номеру завдння для звіту</b> ((10-1)%8) + 1 = 2, тож звіт виконується за завданням під номером 2.</p>
+<p><b>Мета:</b> Виконати завдання, номер якого визначили вище за формулою, на оцінку "задовільно".</p>
+<p><b>Функціональне призначення</b> Програма призначена для визначення кількості слів у рядку.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Написання коду програми</h1>
+<div class="fragment"><div class="line">#include &quot;stdio.h&quot;</div>
+<div class="line">#include &quot;string.h&quot;</div>
+<div class="line">#define size 100</div>
+<div class="line"> </div>
+<div class="line">void schet_slov(char str[size]);</div>
+<div class="line"> </div>
+<div class="line">int main(){ </div>
+<div class="line">char str[size] = &quot;&quot;;</div>
+<div class="line">printf(&quot;Введіть рядок: &quot;);</div>
+<div class="line">fgets(str, size, stdin);</div>
+<div class="line">schet_slov(str);</div>
+<div class="line">return 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void schet_slov(char str[size]){</div>
+<div class="line">char *point1 = strchr(str, &#39; &#39;);    //шукаємо перший пробіл</div>
+<div class="line">char *end = strchr(str, &#39;\0&#39;);  //шукаємо символ закінчення рядку</div>
+<div class="line">int res = 0;    </div>
+<div class="line"> </div>
+<div class="line">/*Якщо є слово без пробілів*/</div>
+<div class="line">if(point1 == NULL){</div>
+<div class="line">    res++;</div>
+<div class="line">    printf(&quot;Слів: %d&quot;, res);</div>
+<div class="line">    return 0;</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">*point1 = &#39;*&#39;;          //за адресом першого пробіла змінюємо його на будь-який символ</div>
+<div class="line"> </div>
+<div class="line">/*Якщо 0 елемент рядка не пробіл, то +1 слово*/     </div>
+<div class="line">if(point1 != str){</div>
+<div class="line">    res++;  </div>
+<div class="line">    }</div>
+<div class="line">        </div>
+<div class="line">char *point2 = strchr(str, &#39; &#39;);      //шукаємо наступний пробіл </div>
+<div class="line">int i = 0;</div>
+<div class="line">/*Цикл пошуку наступних пробілів*/</div>
+<div class="line">while(i &lt; 1){ </div>
+<div class="line">if(point2 == NULL &amp;&amp; point1 != end){    </div>
+<div class="line">    res++;</div>
+<div class="line">    i++;</div>
+<div class="line">}else if(point2 - point1 == 1){</div>
+<div class="line">    point1 = point2;</div>
+<div class="line">    *point1 = &#39;*&#39;;</div>
+<div class="line">    point2 = strchr(str, &#39; &#39;);</div>
+<div class="line">    i++;</div>
+<div class="line"> </div>
+<div class="line">}else{</div>
+<div class="line">    point1 = point2;</div>
+<div class="line">    *point1 = &#39;*&#39;;</div>
+<div class="line">    point2 = strchr(str, &#39; &#39;);</div>
+<div class="line">    res++;</div>
+<div class="line">        }       </div>
+<div class="line">    }</div>
+<div class="line">printf(&quot;Слів: %d&quot;, res);    </div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Компіляція програми та перевірка на правильність її роботи через nemiver</h1>
+<p><img src="file:///home/aleksey/lavka/lab13/2/doc/nemiver13.2.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Блок-схема</h1>
+<p><img src="file:///home/aleksey/lavka/lab13/2/doc/13.2.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Висновок</h1>
+<p>У ході цієї лабораторної роботи я ознайомився зі строками та виконав з ними завдання на оцінку задовільно та описав його у цьому звіті. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
