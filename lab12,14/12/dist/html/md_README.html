@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторна робота №12: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Лабораторна робота №12
+   &#160;<span id="projectnumber">12.1</span>
+   </div>
+   <div id="projectbrief">Взаємодія з користувачем шляхом механізму введення/виведення.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li>Дано масив масивів з N x N цілих чисел, який заповнюється з клавіатури. У кожному рядку масиву <b>знайти</b> кількість парних додатніх чисел. Отримані результати <b>записати</b> в одновимірний масив та вивести результати на екран.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Виконання роботи</h1>
+<p><b>Функціональне призначення</b> Програма призначена для пошуку парних додатніх чисел у масиві, використовуючи показчики та функціїї введення/виведення.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Написання коду програми</h1>
+<div class="fragment"><div class="line">#include &lt;malloc.h&gt;</div>
+<div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
+<div class="line">#define size 3</div>
+<div class="line"> </div>
+<div class="line">void zap(int **mas);</div>
+<div class="line">void perebor(int **mas, int res[size*size]);</div>
+<div class="line">void inf(char numb[10], char theme[200], int author, char let);</div>
+<div class="line"> </div>
+<div class="line">int main(){</div>
+<div class="line">int **mas = (int**)malloc(size*sizeof(int*));</div>
+<div class="line">for(int i = 0; i &lt; size; i++){</div>
+<div class="line">    *(mas+i) = (int*)malloc(size*sizeof(int));</div>
+<div class="line">}</div>
+<div class="line">int res[size*size] = {0};</div>
+<div class="line">char numb[10] = {0};</div>
+<div class="line">char theme[200] = {0};</div>
+<div class="line">int author;</div>
+<div class="line">char let;</div>
+<div class="line"> </div>
+<div class="line">inf(numb, theme, author, let);</div>
+<div class="line">zap(mas);</div>
+<div class="line">perebor(mas, res);</div>
+<div class="line">    for(int i = 0; i &lt; size; i++){</div>
+<div class="line">        free(*(mas+i));</div>
+<div class="line">    }</div>
+<div class="line">    return 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void inf(char numb[10], char theme[200], int author, char let){</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;Введіть номер лабораторної роботи: &quot;);</div>
+<div class="line">    gets(numb);</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;Введіть тему лабораторної роботи: &quot;);</div>
+<div class="line">    gets(theme);</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;Введіть літеру вашої групи: &quot;);</div>
+<div class="line">    let = getc(stdin);</div>
+<div class="line"> </div>
+<div class="line">printf(&quot;\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;---------------------\n&quot;);</div>
+<div class="line">    putc(&#39;-&#39;, stdout);</div>
+<div class="line">    printf(&quot;Номер лабораторної роботи: &quot;);</div>
+<div class="line">    puts(numb);</div>
+<div class="line"> </div>
+<div class="line">    putc(&#39;-&#39;, stdout);</div>
+<div class="line">    printf(&quot;Тема лабораторної роботи: &quot;);</div>
+<div class="line">    puts(theme);</div>
+<div class="line">    printf(&quot;---------------------\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">printf(&quot;Натисніть &#39;1&#39;, щоб дізнатися дані про автора та продовжити;\n&quot;);</div>
+<div class="line">printf(&quot;Натисніть &#39;0&#39;, щоб пропустити дані про автора та продовжити;\n&quot;);</div>
+<div class="line">printf(&quot;Натисніть будь-яке інше число, щоб завершити програму: \n&quot;);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">read(0, &amp;author, 1);</div>
+<div class="line">write(1, &amp;author, 0);</div>
+<div class="line">printf(&quot;\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">    if(author == 49){</div>
+<div class="line">        printf(&quot;Дані про автора: Лавка Олексій, група КІТ-120%c\n\n&quot;, let);</div>
+<div class="line">    }else if(author == 48){</div>
+<div class="line">        printf(&quot;Ви обрали пропустити дані про автора\n\n&quot;);</div>
+<div class="line">    }else{</div>
+<div class="line">        printf(&quot;Програма завершена\n&quot;);</div>
+<div class="line">        exit(0);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void zap(int **mas){</div>
+<div class="line">for(int i = 0; i &lt; size; i++){</div>
+<div class="line">    for(int j = 0; j &lt; size; j++){</div>
+<div class="line">        printf(&quot;Введіть число масива: &quot;);</div>
+<div class="line">        scanf(&quot;%d&quot;, &amp;*(*(mas+i)+j));</div>
+<div class="line">    }</div>
+<div class="line">   }</div>
+<div class="line">   printf(&quot;\n&quot;);</div>
+<div class="line">   printf(&quot;Заданий масив: &quot;);</div>
+<div class="line">for(int i = 0; i &lt; size; i++){</div>
+<div class="line">    printf(&quot;\n&quot;);</div>
+<div class="line">    for(int j = 0; j &lt; size; j++){</div>
+<div class="line">        printf(&quot;%d &quot;, *(*(mas+i)+j));</div>
+<div class="line">    }</div>
+<div class="line">   }</div>
+<div class="line">   printf(&quot;\n\n&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void perebor(int **mas, int res[size*size]){</div>
+<div class="line">int a = 0;</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;Парні додатні числа заданого масива: &quot;);</div>
+<div class="line"> </div>
+<div class="line">for(int i = 0; i &lt; size; i++){</div>
+<div class="line">    for(int j = 0; j &lt; size; j++){</div>
+<div class="line">        if( ((*(*(mas+i)+j))%2) == 0 &amp;&amp; *(*(mas+i)+j) &gt; 0){</div>
+<div class="line">        *(res+a) = *(*(mas+i)+j);</div>
+<div class="line">        printf(&quot;%d &quot;, *(res+a));</div>
+<div class="line">        a++;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">   printf(&quot;\n&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Компіляція програми та виведення результатів на екран.</h1>
+<p><img src="file:///home/aleksey/lavka/lab12,14/12/doc/terminal12.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Блок-схема</h1>
+<p><img src="file:///home/aleksey/lavka/lab12,14/12/doc/scheme12.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Висновок</h1>
+<p>У ході цієї лабораторної роботи я ознайомився з функціями введення/виведення та переробив лабораторну роботу №11, використовуючи ці функції. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Знайти детермінант матриці, якщо він існує, беручи дані з файлу.: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Знайти детермінант матриці, якщо він існує, беручи дані з файлу.
+   &#160;<span id="projectnumber">14.2</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота №14</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li>Дано файл, що містить інформацію про матрицю. В першій строці надається інформація про розмір матриці, а в кожній іншій - інформація про елементи матриці. <b>Визначити</b> детермінант матриці, якщо він існує.</li>
+</ol>
+<p><b>Виконав: Лавка Олексій</b></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Виконання роботи</h1>
+<p><b>Визначення номеру завдння для звіту</b> ((10-1)%2) + 1 = 2, тож звіт виконується за завданням під номером 2.</p>
+<p><b>Мета:</b> Виконати завдання, номер якого визначили вище за формулою, на оцінку "добре".</p>
+<p><b>Функціональне призначення</b> Програма призначена для роботи з файлами та пошуку детермінанту матриці, якщо він існує.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Написання коду програми</h1>
+<div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
+<div class="line">#define size 3</div>
+<div class="line"> </div>
+<div class="line">int determinant(int mas[size][size], int N, FILE *fp);</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">  FILE *fp; //покажчик на файл</div>
+<div class="line">  fp = fopen(&quot;matr.txt&quot;, &quot;r&quot;); //відкриваємо файл для читання</div>
+<div class="line"> </div>
+<div class="line">  int num1 = 0; //кількість рядків матриці</div>
+<div class="line">  int num2 = 0; //кількість стовбців матриці</div>
+<div class="line">  fscanf(fp, &quot;%d %d&quot;, &amp;num1, &amp;num2);</div>
+<div class="line"> </div>
+<div class="line">  /*якщо матриця не квадратна, тоді програма завершується*/</div>
+<div class="line">  if(num1 != num2)</div>
+<div class="line">  {</div>
+<div class="line"> </div>
+<div class="line">    fclose(fp); //завершуємо роботу з файлом</div>
+<div class="line">    printf(&quot;\nError: детермінант матриці знайти неможливо\n\n&quot;);</div>
+<div class="line">    exit(1);</div>
+<div class="line">  /*інакше знаходимо детермінант матриці*/</div>
+<div class="line">  }else{</div>
+<div class="line"> </div>
+<div class="line">    int N = num1;</div>
+<div class="line">    int mas[size][size] = {0};</div>
+<div class="line"> </div>
+<div class="line">    determinant(mas, N, fp);</div>
+<div class="line">    fclose(fp); //завершуємо роботу з файлом</div>
+<div class="line"> </div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  return 0;</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int determinant(int mas[size][size], int N, FILE *fp)</div>
+<div class="line">{</div>
+<div class="line">    float det = 0;  //детермінант матриці</div>
+<div class="line">    float temp = 0; //тимчасова змінна</div>
+<div class="line"> </div>
+<div class="line">    for(int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">      for(int j = 0; j &lt; N; j++)</div>
+<div class="line">      {</div>
+<div class="line">        fscanf(fp, &quot;%d&quot;, &amp;*(*(mas+i)+j));</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;\n&quot;);</div>
+<div class="line">    printf(&quot;Задана матриця:&quot;);</div>
+<div class="line">    for(int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">      printf(&quot;\n&quot;);</div>
+<div class="line">      for(int j = 0; j &lt; N; j++)</div>
+<div class="line">      {</div>
+<div class="line">      printf(&quot;%d &quot;, *(*(mas+i)+j));</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;\n\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">  for(int i = 0; i &lt; N; i++)</div>
+<div class="line">  {</div>
+<div class="line">    for(int j = 0; j &lt; N; j++)</div>
+<div class="line">    {</div>
+<div class="line">      if(j&gt;i)</div>
+<div class="line">      {</div>
+<div class="line">      temp = *(*(mas+j)+i) / *(*(mas+i)+i);</div>
+<div class="line">      for(int k = 0; k &lt; N; k++){</div>
+<div class="line">      *(*(mas+j)+k) -= temp * *(*(mas+i)+k);</div>
+<div class="line">    }</div>
+<div class="line">   }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line">      det = 1;</div>
+<div class="line">      for(int i = 0; i &lt; N; i++)</div>
+<div class="line">      {</div>
+<div class="line">        det *= *(*(mas+i)+i);</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">  printf(&quot;Детермінат матриці: %.0f\n&quot;, det);</div>
+<div class="line"> </div>
+<div class="line">  return det;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Компіляція програми та виведення результатів на екран</h1>
+<p><img src="file:///home/aleksey/lavka/lab12,14/14/3/doc/terminal14.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Дані про матрицю у файлі</h1>
+<p><img src="file:///home/aleksey/lavka/lab12,14/14/3/doc/file14.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Блок-схема</h1>
+<p><img src="file:///home/aleksey/lavka/lab12,14/14/3/doc/scheme14.png" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Висновок</h1>
+<p>У ході цієї лабораторної роботи я ознайомився з файлами, та виконав завдання на оцінку "добре", одне з яких я описав у цьому звіті. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
