@@ -1,0 +1,3 @@
+true Математика 32 EK302 Аліна Гайдаш lfkfflssf@gmail.com
+true Програмування 35 ВK302 Сергій Бульба aldkadka@gmail.com
+false Філософія 28 Каразина705 Віктор Міщенко jffrfdg@gmail.com
