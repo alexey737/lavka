@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Робота з динамічними масивами: Файл src/lib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Робота з динамічними масивами
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота №18</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структури даних</a> &#124;
+<a href="#define-members">Макровизначення</a> &#124;
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл lib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл з об'явою прототипів функцій та структур  
+<a href="#details">Детальніше...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;malloc.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для lib.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="lib_8h__incl.png" border="0" usemap="#src_2lib_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлів, які включають цей файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="lib_8h__dep__incl.png" border="0" usemap="#src_2lib_8hdep" alt=""/></div>
+</div>
+</div>
+<p><a href="lib_8h_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Структури даних</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteacher.html">teacher</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdiscipline.html">discipline</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макровизначення</h2></td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:acc598cb8483b7227365ca6bff060ac39"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#acc598cb8483b7227365ca6bff060ac39">insert</a> (char *stroka1, char *stroka2, int index)</td></tr>
+<tr class="memdesc:acc598cb8483b7227365ca6bff060ac39"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function insert  <a href="lib_8h.html#acc598cb8483b7227365ca6bff060ac39">Детальніше...</a><br /></td></tr>
+<tr class="separator:acc598cb8483b7227365ca6bff060ac39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96278bd19f8189fe90d7bd87480d9f4b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#a96278bd19f8189fe90d7bd87480d9f4b">reduce</a> (char *stroka, int index1, int index2)</td></tr>
+<tr class="memdesc:a96278bd19f8189fe90d7bd87480d9f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function reduce  <a href="lib_8h.html#a96278bd19f8189fe90d7bd87480d9f4b">Детальніше...</a><br /></td></tr>
+<tr class="separator:a96278bd19f8189fe90d7bd87480d9f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7d5ad12b2941e3859e9b688a18be79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#a5d7d5ad12b2941e3859e9b688a18be79">rand_fill</a> (<a class="el" href="structdiscipline.html">discipline</a> *disc_arr, int n)</td></tr>
+<tr class="memdesc:a5d7d5ad12b2941e3859e9b688a18be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function rand_fill  <a href="lib_8h.html#a5d7d5ad12b2941e3859e9b688a18be79">Детальніше...</a><br /></td></tr>
+<tr class="separator:a5d7d5ad12b2941e3859e9b688a18be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1530fafef1b36d4b95803e084f6b1d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#af1530fafef1b36d4b95803e084f6b1d7">output</a> (<a class="el" href="structdiscipline.html">discipline</a> *disc_arr, int n)</td></tr>
+<tr class="memdesc:af1530fafef1b36d4b95803e084f6b1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function output  <a href="lib_8h.html#af1530fafef1b36d4b95803e084f6b1d7">Детальніше...</a><br /></td></tr>
+<tr class="separator:af1530fafef1b36d4b95803e084f6b1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75a958b6ce3e10f3f3e093bd71ebae3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#aa75a958b6ce3e10f3f3e093bd71ebae3">delete_element</a> (<a class="el" href="structdiscipline.html">discipline</a> *disc_arr, int n)</td></tr>
+<tr class="memdesc:aa75a958b6ce3e10f3f3e093bd71ebae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function delete_element  <a href="lib_8h.html#aa75a958b6ce3e10f3f3e093bd71ebae3">Детальніше...</a><br /></td></tr>
+<tr class="separator:aa75a958b6ce3e10f3f3e093bd71ebae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5e46f9d089c09847ed4b4e4b43b2ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8h.html#a3c5e46f9d089c09847ed4b4e4b43b2ff">add_element</a> (<a class="el" href="structdiscipline.html">discipline</a> *disc_arr, int n)</td></tr>
+<tr class="memdesc:a3c5e46f9d089c09847ed4b4e4b43b2ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">@function add_element  <a href="lib_8h.html#a3c5e46f9d089c09847ed4b4e4b43b2ff">Детальніше...</a><br /></td></tr>
+<tr class="separator:a3c5e46f9d089c09847ed4b4e4b43b2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Файл з об'явою прототипів функцій та структур </p>
+<dl class="section author"><dt>Автор</dt><dd>Lavka O. </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>19-apr-2021 </dd></dl>
+<dl class="section version"><dt>Версія</dt><dd>1.0 </dd></dl>
+</div><h2 class="groupheader">Опис макровизначень</h2>
+<a id="a0240ac851181b84ac374872dc5434ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0240ac851181b84ac374872dc5434ee4">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="a3c5e46f9d089c09847ed4b4e4b43b2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5e46f9d089c09847ed4b4e4b43b2ff">&#9670;&nbsp;</a></span>add_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int add_element </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdiscipline.html">discipline</a> *&#160;</td>
+          <td class="paramname"><em>disc_arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function add_element </p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="lib_8h_a3c5e46f9d089c09847ed4b4e4b43b2ff_cgraph.png" border="0" usemap="#lib_8h_a3c5e46f9d089c09847ed4b4e4b43b2ff_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa75a958b6ce3e10f3f3e093bd71ebae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa75a958b6ce3e10f3f3e093bd71ebae3">&#9670;&nbsp;</a></span>delete_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int delete_element </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdiscipline.html">discipline</a> *&#160;</td>
+          <td class="paramname"><em>disc_arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function delete_element </p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="lib_8h_aa75a958b6ce3e10f3f3e093bd71ebae3_cgraph.png" border="0" usemap="#lib_8h_aa75a958b6ce3e10f3f3e093bd71ebae3_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acc598cb8483b7227365ca6bff060ac39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc598cb8483b7227365ca6bff060ac39">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* insert </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>stroka1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>stroka2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function insert </p>
+
+</div>
+</div>
+<a id="af1530fafef1b36d4b95803e084f6b1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1530fafef1b36d4b95803e084f6b1d7">&#9670;&nbsp;</a></span>output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void output </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdiscipline.html">discipline</a> *&#160;</td>
+          <td class="paramname"><em>disc_arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function output </p>
+
+</div>
+</div>
+<a id="a5d7d5ad12b2941e3859e9b688a18be79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7d5ad12b2941e3859e9b688a18be79">&#9670;&nbsp;</a></span>rand_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rand_fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdiscipline.html">discipline</a> *&#160;</td>
+          <td class="paramname"><em>disc_arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function rand_fill </p>
+
+</div>
+</div>
+<a id="a96278bd19f8189fe90d7bd87480d9f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96278bd19f8189fe90d7bd87480d9f4b">&#9670;&nbsp;</a></span>reduce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* reduce </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>stroka</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@function reduce </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
