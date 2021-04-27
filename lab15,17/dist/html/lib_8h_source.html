@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Робота зі структурами: Текст програми src/lib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Робота зі структурами
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота №15,17</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="lib_8h.html#a0240ac851181b84ac374872dc5434ee4">   16</a></span>&#160;<span class="preprocessor">#define N 3</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structteacher.html">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structteacher.html#ab2256bfcfed2a9f03962874491514266">   19</a></span>&#160;    <span class="keywordtype">char</span> name[100];</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structteacher.html#a05c25f4026113bc97d1eb0f76ffb9e37">   20</a></span>&#160;    <span class="keywordtype">char</span> surname[100];</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structteacher.html#a7ca20f93a760091bdf45fff5ccfe8a86">   21</a></span>&#160;    <span class="keywordtype">char</span> email[100];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <a class="code" href="structteacher.html">teacher</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structdiscipline.html">   24</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structdiscipline.html#ac2b12416c5f31e59e238f11b90d9cf90">   25</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structdiscipline.html#ac2b12416c5f31e59e238f11b90d9cf90">every_week</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structdiscipline.html#a7fe7cfc023617ab1efe101c48344baca">   26</a></span>&#160;    <span class="keywordtype">char</span> predmet[100];</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structdiscipline.html#af3c1c9e746c522f7ecacfb425025978f">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structdiscipline.html#af3c1c9e746c522f7ecacfb425025978f">hours</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structdiscipline.html#ad90ddf4190ed2f968867e5b857523fba">   29</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structdiscipline.html#ad90ddf4190ed2f968867e5b857523fba">place</a>{ NTU_VK_302, NTU_EK_204, NTU_EK_302, Karazina_705 } audience;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structdiscipline.html#ae8eaf7c6fadfb776065b9a6c20fe93c4">   31</a></span>&#160;    <a class="code" href="structteacher.html">teacher</a> <a class="code" href="structdiscipline.html#ae8eaf7c6fadfb776065b9a6c20fe93c4">myteacher</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="structdiscipline.html">discipline</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a3940610f40f9b54f29725728dc5e4939">read_from_file</a>(FILE* fread, <a class="code" href="structdiscipline.html">discipline</a> *disc_arr);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#ab686bf80e58dfa8f96d6473efd1d022c">write_to_file</a>(FILE* fwrite, <a class="code" href="structdiscipline.html">discipline</a> *disc_arr);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#adda993d0dfba9fa242dc282d3505631b">struct_output</a>(<a class="code" href="structdiscipline.html">discipline</a> *disc_arr);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#acd4d152dd713a15448f718eed0819911">struct_sort</a>(<a class="code" href="structdiscipline.html">discipline</a>* disc_arr);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a7ae98bb958841e52efb3e9563f24d4eb">sort_case</a>(<a class="code" href="structdiscipline.html">discipline</a>* disc_arr, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">int</span> <a class="code" href="lib_8h.html#a7e30f3fe57310ad8ce6ec13f0ac62963">search_discipline</a>(<a class="code" href="structdiscipline.html">discipline</a> *disc_arr);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lib_8h.html#a2fbf93f3b6140bad5c821beae6af6ecf">rand_fill</a>(<a class="code" href="structdiscipline.html">discipline</a> *disc_arr);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alib_8h_html"><div class="ttname"><a href="lib_8h.html">lib.h</a></div><div class="ttdoc">Файл з об'явою прототипів функцій та структур</div></div>
+<div class="ttc" id="alib_8h_html_a7ae98bb958841e52efb3e9563f24d4eb"><div class="ttname"><a href="lib_8h.html#a7ae98bb958841e52efb3e9563f24d4eb">sort_case</a></div><div class="ttdeci">void sort_case(discipline *disc_arr, int n)</div><div class="ttdoc">@function sort_case</div><div class="ttdef"><b>Definition:</b> lib.c:202</div></div>
+<div class="ttc" id="astructteacher_html_a05c25f4026113bc97d1eb0f76ffb9e37"><div class="ttname"><a href="structteacher.html#a05c25f4026113bc97d1eb0f76ffb9e37">teacher::surname</a></div><div class="ttdeci">char surname[100]</div><div class="ttdef"><b>Definition:</b> lib.h:20</div></div>
+<div class="ttc" id="alib_8c_html_ab686bf80e58dfa8f96d6473efd1d022c"><div class="ttname"><a href="lib_8c.html#ab686bf80e58dfa8f96d6473efd1d022c">write_to_file</a></div><div class="ttdeci">void write_to_file(FILE *fwrite, discipline *disc_arr)</div><div class="ttdoc">@function write_to_file</div><div class="ttdef"><b>Definition:</b> lib.c:101</div></div>
+<div class="ttc" id="alib_8h_html_adda993d0dfba9fa242dc282d3505631b"><div class="ttname"><a href="lib_8h.html#adda993d0dfba9fa242dc282d3505631b">struct_output</a></div><div class="ttdeci">void struct_output(discipline *disc_arr)</div><div class="ttdoc">@function struct_output</div><div class="ttdef"><b>Definition:</b> lib.c:59</div></div>
+<div class="ttc" id="alib_8h_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="lib_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> lib.h:16</div></div>
+<div class="ttc" id="alib_8c_html_adda993d0dfba9fa242dc282d3505631b"><div class="ttname"><a href="lib_8c.html#adda993d0dfba9fa242dc282d3505631b">struct_output</a></div><div class="ttdeci">void struct_output(discipline *disc_arr)</div><div class="ttdoc">@function struct_output</div><div class="ttdef"><b>Definition:</b> lib.c:59</div></div>
+<div class="ttc" id="alib_8c_html_a7ae98bb958841e52efb3e9563f24d4eb"><div class="ttname"><a href="lib_8c.html#a7ae98bb958841e52efb3e9563f24d4eb">sort_case</a></div><div class="ttdeci">void sort_case(discipline *disc_arr, int n)</div><div class="ttdoc">@function sort_case</div><div class="ttdef"><b>Definition:</b> lib.c:202</div></div>
+<div class="ttc" id="alib_8c_html_acd4d152dd713a15448f718eed0819911"><div class="ttname"><a href="lib_8c.html#acd4d152dd713a15448f718eed0819911">struct_sort</a></div><div class="ttdeci">void struct_sort(discipline *disc_arr)</div><div class="ttdoc">@function struct_sort</div><div class="ttdef"><b>Definition:</b> lib.c:140</div></div>
+<div class="ttc" id="astructdiscipline_html_a1b72d7ed9dd14e0a47da62c0b2ee6d58"><div class="ttname"><a href="structdiscipline.html#a1b72d7ed9dd14e0a47da62c0b2ee6d58">discipline::audience</a></div><div class="ttdeci">enum discipline::place audience</div></div>
+<div class="ttc" id="alib_8c_html_a3940610f40f9b54f29725728dc5e4939"><div class="ttname"><a href="lib_8c.html#a3940610f40f9b54f29725728dc5e4939">read_from_file</a></div><div class="ttdeci">void read_from_file(FILE *fread, discipline *disc_arr)</div><div class="ttdoc">@function read_from_file</div><div class="ttdef"><b>Definition:</b> lib.c:13</div></div>
+<div class="ttc" id="astructdiscipline_html"><div class="ttname"><a href="structdiscipline.html">discipline</a></div><div class="ttdef"><b>Definition:</b> lib.h:24</div></div>
+<div class="ttc" id="astructdiscipline_html_af3c1c9e746c522f7ecacfb425025978f"><div class="ttname"><a href="structdiscipline.html#af3c1c9e746c522f7ecacfb425025978f">discipline::hours</a></div><div class="ttdeci">int hours</div><div class="ttdef"><b>Definition:</b> lib.h:27</div></div>
+<div class="ttc" id="astructdiscipline_html_ad90ddf4190ed2f968867e5b857523fba"><div class="ttname"><a href="structdiscipline.html#ad90ddf4190ed2f968867e5b857523fba">discipline::place</a></div><div class="ttdeci">place</div><div class="ttdef"><b>Definition:</b> lib.h:29</div></div>
+<div class="ttc" id="alib_8h_html_a7e30f3fe57310ad8ce6ec13f0ac62963"><div class="ttname"><a href="lib_8h.html#a7e30f3fe57310ad8ce6ec13f0ac62963">search_discipline</a></div><div class="ttdeci">int search_discipline(discipline *disc_arr)</div><div class="ttdoc">@function search_discipline</div><div class="ttdef"><b>Definition:</b> lib.c:434</div></div>
+<div class="ttc" id="alib_8c_html_a7e30f3fe57310ad8ce6ec13f0ac62963"><div class="ttname"><a href="lib_8c.html#a7e30f3fe57310ad8ce6ec13f0ac62963">search_discipline</a></div><div class="ttdeci">int search_discipline(discipline *disc_arr)</div><div class="ttdoc">@function search_discipline</div><div class="ttdef"><b>Definition:</b> lib.c:434</div></div>
+<div class="ttc" id="astructdiscipline_html_ac2b12416c5f31e59e238f11b90d9cf90"><div class="ttname"><a href="structdiscipline.html#ac2b12416c5f31e59e238f11b90d9cf90">discipline::every_week</a></div><div class="ttdeci">bool every_week</div><div class="ttdef"><b>Definition:</b> lib.h:25</div></div>
+<div class="ttc" id="astructdiscipline_html_ae8eaf7c6fadfb776065b9a6c20fe93c4"><div class="ttname"><a href="structdiscipline.html#ae8eaf7c6fadfb776065b9a6c20fe93c4">discipline::myteacher</a></div><div class="ttdeci">teacher myteacher</div><div class="ttdef"><b>Definition:</b> lib.h:31</div></div>
+<div class="ttc" id="astructteacher_html_ab2256bfcfed2a9f03962874491514266"><div class="ttname"><a href="structteacher.html#ab2256bfcfed2a9f03962874491514266">teacher::name</a></div><div class="ttdeci">char name[100]</div><div class="ttdef"><b>Definition:</b> lib.h:19</div></div>
+<div class="ttc" id="alib_8h_html_a3940610f40f9b54f29725728dc5e4939"><div class="ttname"><a href="lib_8h.html#a3940610f40f9b54f29725728dc5e4939">read_from_file</a></div><div class="ttdeci">void read_from_file(FILE *fread, discipline *disc_arr)</div><div class="ttdoc">@function read_from_file</div><div class="ttdef"><b>Definition:</b> lib.c:13</div></div>
+<div class="ttc" id="alib_8h_html_a2fbf93f3b6140bad5c821beae6af6ecf"><div class="ttname"><a href="lib_8h.html#a2fbf93f3b6140bad5c821beae6af6ecf">rand_fill</a></div><div class="ttdeci">void rand_fill(discipline *disc_arr)</div><div class="ttdoc">@function rand_fill</div><div class="ttdef"><b>Definition:</b> lib.c:451</div></div>
+<div class="ttc" id="alib_8h_html_ab686bf80e58dfa8f96d6473efd1d022c"><div class="ttname"><a href="lib_8h.html#ab686bf80e58dfa8f96d6473efd1d022c">write_to_file</a></div><div class="ttdeci">void write_to_file(FILE *fwrite, discipline *disc_arr)</div><div class="ttdoc">@function write_to_file</div><div class="ttdef"><b>Definition:</b> lib.c:101</div></div>
+<div class="ttc" id="astructteacher_html_a7ca20f93a760091bdf45fff5ccfe8a86"><div class="ttname"><a href="structteacher.html#a7ca20f93a760091bdf45fff5ccfe8a86">teacher::email</a></div><div class="ttdeci">char email[100]</div><div class="ttdef"><b>Definition:</b> lib.h:21</div></div>
+<div class="ttc" id="alib_8h_html_acd4d152dd713a15448f718eed0819911"><div class="ttname"><a href="lib_8h.html#acd4d152dd713a15448f718eed0819911">struct_sort</a></div><div class="ttdeci">void struct_sort(discipline *disc_arr)</div><div class="ttdoc">@function struct_sort</div><div class="ttdef"><b>Definition:</b> lib.c:140</div></div>
+<div class="ttc" id="astructteacher_html"><div class="ttname"><a href="structteacher.html">teacher</a></div><div class="ttdef"><b>Definition:</b> lib.h:18</div></div>
+<div class="ttc" id="alib_8c_html_a2fbf93f3b6140bad5c821beae6af6ecf"><div class="ttname"><a href="lib_8c.html#a2fbf93f3b6140bad5c821beae6af6ecf">rand_fill</a></div><div class="ttdeci">void rand_fill(discipline *disc_arr)</div><div class="ttdoc">@function rand_fill</div><div class="ttdef"><b>Definition:</b> lib.c:451</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

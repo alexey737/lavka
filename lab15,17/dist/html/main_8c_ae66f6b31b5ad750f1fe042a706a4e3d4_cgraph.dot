@@ -1,0 +1,23 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rand_fill",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#a2fbf93f3b6140bad5c821beae6af6ecf",tooltip="@function rand_fill"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="read_from_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#a3940610f40f9b54f29725728dc5e4939",tooltip="@function read_from_file"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="search_discipline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#a7e30f3fe57310ad8ce6ec13f0ac62963",tooltip="@function search_discipline"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="struct_output",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#adda993d0dfba9fa242dc282d3505631b",tooltip="@function struct_output"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="struct_sort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#acd4d152dd713a15448f718eed0819911",tooltip="@function struct_sort"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sort_case",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#a7ae98bb958841e52efb3e9563f24d4eb",tooltip="@function sort_case"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="write_to_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib_8c.html#ab686bf80e58dfa8f96d6473efd1d022c",tooltip="@function write_to_file"];
+}

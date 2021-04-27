@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Робота зі структурами: Загальне завдання</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Робота зі структурами
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота №15,17</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Загальне завдання </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><b>Ознайомитися</b> зі структурами та виконати всі завдання на оцінку "добре".</li>
+</ol>
+<p><b>Виконав: Лавка Олексій</b></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Виконання роботи</h1>
+<p><b>Мета:</b> Виконати завдання на оцінку "добре".</p>
+<p><b>Функціональне призначення</b> Програма призначена для роботи зі структурами</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Написання коду програми</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Файл main.c</h2>
+<div class="fragment"><div class="line">#include &quot;lib.h&quot;</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    discipline disc_arr[N];                     //масив структур discipline</div>
+<div class="line"> </div>
+<div class="line">    FILE *fread, *fwrite;</div>
+<div class="line">    fread = fopen(&quot;read.txt&quot;, &quot;r&quot;);</div>
+<div class="line">    fwrite = fopen(&quot;write.txt&quot;, &quot;w&quot;);</div>
+<div class="line"> </div>
+<div class="line">    read_from_file(fread, disc_arr);    //функція запису даних з файлу у масив структур</div>
+<div class="line">    struct_output(disc_arr);                    //функція виводу масиву структур на екран</div>
+<div class="line">    write_to_file(fwrite, disc_arr);    //функція запису даних масиву структур в інший файл</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    struct_sort(disc_arr);                      //функція сортування массиву структур за обраним критерієм</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    search_discipline(disc_arr);            //функція пошуку кількості предметів, які проводяться кожного тижня в аудиторії Каразіна 705</div>
+<div class="line">    rand_fill(disc_arr);                            //функція рандомного завповнення массиву структур</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    fclose(fread);</div>
+<div class="line">    fclose(fwrite);</div>
+<div class="line">    return 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+Файл lib.h</h2>
+<div class="fragment"><div class="line">#include &lt;stdio.h&gt;</div>
+<div class="line">#include &lt;stdlib.h&gt;</div>
+<div class="line">#include &lt;stdbool.h&gt;</div>
+<div class="line">#include &lt;string.h&gt;</div>
+<div class="line">#include &lt;time.h&gt;</div>
+<div class="line">#define N 3</div>
+<div class="line"> </div>
+<div class="line">typedef struct {</div>
+<div class="line">    char name[100];</div>
+<div class="line">    char surname[100];</div>
+<div class="line">    char email[100];</div>
+<div class="line">} teacher;</div>
+<div class="line"> </div>
+<div class="line">typedef struct {</div>
+<div class="line">    bool every_week;</div>
+<div class="line">    char predmet[100];</div>
+<div class="line">    int hours;</div>
+<div class="line"> </div>
+<div class="line">    enum place{ NTU_VK_302, NTU_EK_204, NTU_EK_302, Karazina_705 } audience;</div>
+<div class="line"> </div>
+<div class="line">    teacher myteacher;</div>
+<div class="line"> </div>
+<div class="line">} discipline;</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">* @function read_from_file</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void read_from_file(FILE* fread, discipline *disc_arr);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function write_to_file</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void write_to_file(FILE* fwrite, discipline *disc_arr);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function struct_output</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void struct_output(discipline *disc_arr);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function struct_sort</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void struct_sort(discipline* disc_arr);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function sort_case</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void sort_case(discipline* disc_arr, int n);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function search_teaacher</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">int search_teacher(discipline *disc_arr, char *str1, char *str2);</div>
+<div class="line"> </div>
+<div class="line">/**</div>
+<div class="line">*   @function rand_fill</div>
+<div class="line">*</div>
+<div class="line">*/</div>
+<div class="line">void rand_fill(discipline *disc_arr);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Файл lib.c</h2>
+<div class="fragment"><div class="line">#include &quot;lib.h&quot;</div>
+<div class="line"> </div>
+<div class="line">void read_from_file(FILE *fread, discipline *disc_arr)</div>
+<div class="line">{</div>
+<div class="line">    char every_week[10];</div>
+<div class="line">    char audience[50];</div>
+<div class="line"> </div>
+<div class="line">    for (int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, every_week);</div>
+<div class="line">        if (strcmp(every_week, &quot;true&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].every_week = true;</div>
+<div class="line">        }</div>
+<div class="line">        else if(strcmp(every_week, &quot;false&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].every_week = false;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, &amp;disc_arr[i].predmet);</div>
+<div class="line">        fscanf(fread, &quot;%d&quot;, &amp;disc_arr[i].hours);</div>
+<div class="line"> </div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, audience);</div>
+<div class="line">        if (strcmp(audience, &quot;NTU_VK_302&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].audience = 0;</div>
+<div class="line">        }</div>
+<div class="line">        else if (strcmp(audience, &quot;NTU_EK_204&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].audience = 1;</div>
+<div class="line">        }</div>
+<div class="line">        else if (strcmp(audience, &quot;NTU_EK_302&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].audience = 2;</div>
+<div class="line">        }</div>
+<div class="line">        else if (strcmp(audience, &quot;Karazina_705&quot;) == 0)</div>
+<div class="line">        {</div>
+<div class="line">            disc_arr[i].audience = 3;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, &amp;disc_arr[i].myteacher.name);</div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, &amp;disc_arr[i].myteacher.surname);</div>
+<div class="line">        fscanf(fread, &quot;%s&quot;, &amp;disc_arr[i].myteacher.email);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void struct_output(discipline* disc_arr)</div>
+<div class="line">{</div>
+<div class="line">    for (int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">        printf(&quot;——————————————————————————————————————————————————————————————————\n&quot;);</div>
+<div class="line">        printf(&quot;Структура №%d:\n&quot;, i + 1);</div>
+<div class="line"> </div>
+<div class="line">        if (disc_arr[i].every_week == true)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Чи проводиться кожного тижня: Так\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Чи проводиться кожного тижня: Ні\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(&quot;Предмет: %s\n&quot;, disc_arr[i].predmet);</div>
+<div class="line">        printf(&quot;Кількість годин за семестр: %d\n&quot;, disc_arr[i].hours);</div>
+<div class="line"> </div>
+<div class="line">        if (disc_arr[i].audience == 0)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ ВК 302\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 1)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ EК 204\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 2)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ EК 204\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 3)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія Каразіна 705\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(&quot;Викладач: %s %s\n&quot;, disc_arr[i].myteacher.name, disc_arr[i].myteacher.surname);</div>
+<div class="line">        printf(&quot;Електронна пошта викладача: %s\n&quot;, disc_arr[i].myteacher.email);</div>
+<div class="line">        printf(&quot;——————————————————————————————————————————————————————————————————\n\n&quot;);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void write_to_file(FILE* fwrite, discipline* disc_arr)</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    for (int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">        if (disc_arr[i].every_week == true)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;true &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].every_week == false)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;false &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        fprintf(fwrite, &quot;%s %d &quot;, disc_arr[i].predmet, disc_arr[i].hours);</div>
+<div class="line"> </div>
+<div class="line">        if (disc_arr[i].audience == 0)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;NTU_VK_302 &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 1)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;NTU_EK_204 &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 2)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;NTU_EK_302 &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 3)</div>
+<div class="line">        {</div>
+<div class="line">            fputs(&quot;Karazina_705 &quot;, fwrite);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        fprintf(fwrite, &quot;%s %s %s&quot;, disc_arr[i].myteacher.name, disc_arr[i].myteacher.surname, disc_arr[i].myteacher.email);</div>
+<div class="line">        fputs(&quot;\n&quot;, fwrite);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void struct_sort(discipline* disc_arr)</div>
+<div class="line">{</div>
+<div class="line">    printf(&quot;\n\n&quot;);</div>
+<div class="line">    printf(&quot;——————————————————————————————————————————————————————————————————\n&quot;);</div>
+<div class="line">    printf(&quot;Оберіть критерій для сортування:\n&quot;);</div>
+<div class="line">    printf(&quot;[1] Проведення предмету кожного тижня\n&quot;);</div>
+<div class="line">    printf(&quot;[2] Назва предмету\n&quot;);</div>
+<div class="line">    printf(&quot;[3] Кількість годин\n&quot;);</div>
+<div class="line">    printf(&quot;[4] Ім&#39;я викладача\n&quot;);</div>
+<div class="line">    printf(&quot;[5] Прізвище викладача\n&quot;);</div>
+<div class="line">    printf(&quot;[6] Електронна пошта викладача\n&quot;);</div>
+<div class="line">    printf(&quot;——————————————————————————————————————————————————————————————————\n\n&quot;);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    int n;</div>
+<div class="line">    printf(&quot;Ваш критерій: &quot;);</div>
+<div class="line">    scanf(&quot;%d&quot;, &amp;n);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    switch (n)</div>
+<div class="line">    {</div>
+<div class="line">    case 1:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    case 2:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    case 3:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line">    case 4:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    case 5:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    case 6:</div>
+<div class="line">        sort_case(disc_arr, n);</div>
+<div class="line">        printf(&quot;\nВідсортований массив струтур:\n&quot;);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">        break;</div>
+<div class="line"> </div>
+<div class="line">    default:</div>
+<div class="line">        break;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;Бажаєте відсортувати ще раз?\n&quot;);</div>
+<div class="line">    printf(&quot;[1] Так\n&quot;);</div>
+<div class="line">    printf(&quot;[2] Ні\n&quot;);</div>
+<div class="line"> </div>
+<div class="line">    int k;</div>
+<div class="line">    printf(&quot;Ваше число: &quot;);</div>
+<div class="line">    scanf(&quot;%d&quot;, &amp;k);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    if (k == 1)</div>
+<div class="line">    {</div>
+<div class="line">        struct_sort(disc_arr);</div>
+<div class="line">        struct_output(disc_arr);</div>
+<div class="line">    }</div>
+<div class="line">    else if (k == 2)</div>
+<div class="line">    {</div>
+<div class="line">        printf(&quot;\n&quot;);</div>
+<div class="line">        return;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void sort_case(discipline* disc_arr, int n)</div>
+<div class="line">{</div>
+<div class="line">    int temp1;          //тимчасова змінна для числових полів</div>
+<div class="line">    char temp2[100];    //тимчасова змінна для символьних полів</div>
+<div class="line">    bool temp3;         //тимчасова змінна для булевих полів</div>
+<div class="line"> </div>
+<div class="line">    if (n == 1)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (disc_arr[j].every_week &lt; disc_arr[j + 1].every_week)</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    else if (n == 2)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (strcmp(disc_arr[j].predmet, disc_arr[j + 1].predmet) &gt;= 0)</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    else if (n == 3)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (disc_arr[j].hours &lt; disc_arr[j+1].hours)</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    else if (n == 4)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (strcmp(disc_arr[j].myteacher.name, disc_arr[j+1].myteacher.name) &gt;= 0 )</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    else if (n == 5)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (strcmp(disc_arr[j].myteacher.surname, disc_arr[j + 1].myteacher.surname) &gt;= 0)</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    else if (n == 6)</div>
+<div class="line">    {</div>
+<div class="line">        for (int i = 0; i &lt; N; i++)</div>
+<div class="line">        {</div>
+<div class="line">            for (int j = 0; j &lt; N - 1; j++)</div>
+<div class="line">            {</div>
+<div class="line">                if (strcmp(disc_arr[j].myteacher.email, disc_arr[j + 1].myteacher.email) &gt;= 0)</div>
+<div class="line">                {</div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].predmet, disc_arr[j].predmet);</div>
+<div class="line">                    strcpy(disc_arr[j].predmet, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp1 = disc_arr[j].hours;</div>
+<div class="line">                    disc_arr[j].hours = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].hours = temp1;</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.name, disc_arr[j].myteacher.name);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.name, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.surname, disc_arr[j].myteacher.surname);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.surname, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    strcpy(temp2, disc_arr[j + 1].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j + 1].myteacher.email, disc_arr[j].myteacher.email);</div>
+<div class="line">                    strcpy(disc_arr[j].myteacher.email, temp2);</div>
+<div class="line"> </div>
+<div class="line">                    temp3 = disc_arr[j].every_week;</div>
+<div class="line">                    disc_arr[j].every_week = disc_arr[j + 1].hours;</div>
+<div class="line">                    disc_arr[j + 1].every_week = temp3;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int search_discipline(discipline *disc_arr)</div>
+<div class="line">{</div>
+<div class="line">    int count = 0;</div>
+<div class="line"> </div>
+<div class="line">    for (int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">        if ((disc_arr[i].audience == 3) &amp;&amp; (disc_arr[i].every_week == true))</div>
+<div class="line">        {</div>
+<div class="line">            count++;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;\n\n\nУсого я знайшов %d предметів, які проводяться кожного тижня в аудиторії Каразіна 705\n\n&quot;, count);</div>
+<div class="line"> </div>
+<div class="line">    return count;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void rand_fill(discipline *disc_arr)</div>
+<div class="line">{</div>
+<div class="line">    srand(time(NULL));</div>
+<div class="line">    for(int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">        disc_arr[i].every_week = rand() % 2;</div>
+<div class="line">        sprintf(disc_arr[i].predmet, &quot;Предмет №%d&quot;, rand() % 15 + 10);</div>
+<div class="line">        disc_arr[i].hours = rand() % 12 + 11;</div>
+<div class="line">        sprintf(disc_arr[i].myteacher.name, &quot;Викладач №%d&quot;, rand() % 14 + 12);</div>
+<div class="line">        sprintf(disc_arr[i].myteacher.email, &quot;Електронна пошта викладача №%d&quot;, rand() % 13 + 15);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(&quot;\n\n——————————————————————————————————————————————————————————————————\n&quot;);</div>
+<div class="line">    printf(&quot;Рандомно заповнений масив структур\n&quot;);</div>
+<div class="line">    printf(&quot;——————————————————————————————————————————————————————————————————\n\n&quot;);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    for (int i = 0; i &lt; N; i++)</div>
+<div class="line">    {</div>
+<div class="line">        printf(&quot;——————————————————————————————————————————————————————————————————\n&quot;);</div>
+<div class="line">        printf(&quot;Структура №%d:\n&quot;, i + 1);</div>
+<div class="line"> </div>
+<div class="line">        if (disc_arr[i].every_week == true)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Чи проводиться кожного тижня: Так\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Чи проводиться кожного тижня: Ні\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(&quot;%s\n&quot;, disc_arr[i].predmet);</div>
+<div class="line">        printf(&quot;Кількість годин за семестр: %d\n&quot;, disc_arr[i].hours);</div>
+<div class="line"> </div>
+<div class="line">        if (disc_arr[i].audience == 0)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ ВК 302\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 1)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ EК 204\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 2)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія НТУ ХПІ EК 204\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        else if (disc_arr[i].audience == 3)</div>
+<div class="line">        {</div>
+<div class="line">            printf(&quot;Місце проведення занять: Аудиторія Каразіна 705\n&quot;);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(&quot;%s\n&quot;, disc_arr[i].myteacher.name);</div>
+<div class="line">        printf(&quot;%s\n&quot;, disc_arr[i].myteacher.email);</div>
+<div class="line">        printf(&quot;——————————————————————————————————————————————————————————————————\n\n&quot;);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+Блок-схема</h1>
+<p><img src="file:///home/aleksey/lavka/lab15,17/doc/lab15,17.jpg" alt="text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Висновок</h1>
+<p>У ході цієї лабораторної роботи я ознайомився зі структурами виконав з ними завдання на оцінку добре та описав їх у цьому звіті. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

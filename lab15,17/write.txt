@@ -1,0 +1,3 @@
+true Математика 32 NTU_EK_302 Аліна Гайдаш lfkfflssf@gmail.com
+true Программування 35 NTU_VK_302 Сергій Бульба aldkadka@gmail.com
+true Філософія 28 Karazina_705 Віктор Міщенко jffrfdg@gmail.com
